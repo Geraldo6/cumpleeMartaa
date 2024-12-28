@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Motos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="intro-text">
+            <h1>Un nuevo viaje comienza</h1>
+            <p>Llega al objetivo, Cerdayola del Valles.</p>
+            <p>Tienes que llegar al destino (40km).</p>
+            <button id="startButton" class="menu-button">Comenzar</button>
+            <button id="exitButton" class="menu-button">Salir</button>
+        </div>
+    </div>
+
+    <!-- Contenedor del juego -->
+    <div class="game-container" style="display:none;">
+        <div id="scoreDisplay">Puntos: 0</div> <!-- Contador de puntos -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <!-- Pantalla de carga -->
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+        <h1>Has llegado al destino</h1>
+        <p>Redirigiendo...</p>
+        <!-- Añadir el spinner aquí -->
+        <div class="spinner"></div>
+    </div>
+
+
+    <script src="game.js"></script>
+</body>
+
+</html>

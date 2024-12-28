@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundos Temáticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="world-container">
+        <h1 class="page-title">Elige tu Mundo</h1>
+
+        <div class="worlds-grid">
+            <!-- Mundo de Cerdayola -->
+            <a href="juegos/cerdayola/juego_moto.html" id="primera-foto" class="world-item">
+                <img src="img/C.png" alt="Primera foto" class="world-image">
+                <div class="overlay">Primera foto</div>
+            </a>
+            <!-- Mundo de los Sims -->
+            <a href="juegos/primer regalo/mariofake_modified.html" id="primer-regalo" class="world-item">
+                <img src="img/flor.png" alt="Primer regalo" class="world-image">
+                <div class="overlay">Primer regalo</div>
+            </a>
+            <!-- Mundo de Motos -->
+            <a href="juegos/verano_complicado/index.html" id="verano-complicado" class="world-item">
+                <img src="img/sant.png" alt="Verano Complicado" class="world-image">
+                <div class="overlay">Verano Complicado</div>
+            </a>
+            <!-- Mundo de Fiesta -->
+            <a href="juegos/segundo regalo/mariofake_modified.html" id="segundo-regalo" class="world-item">
+                <img src="img/secret.png" alt="Segundo Regalo" class="world-image">
+                <div class="overlay">Segundo Regalo</div>
+            </a>
+            <a href="juegos/Juego Complicado/index.html" id="juego-complicado" class="world-item">
+                <img src="img/juego.png" alt="Juego Complicado" class="world-image">
+                <div class="overlay">Juego Complicado</div>
+            </a>
+            <a href="juegos/apego destructivo/index.html" id="apego-destructivo" class="world-item">
+                <img src="img/solo.png" alt="Apego Destructivo" class="world-image">
+                <div class="overlay">Apego Destructivo</div>
+            </a>
+            <a href="juegos/mejor momento/index.html" id="mejor-momento" class="world-item">
+                <img src="img/mejor momento.png" alt="Mejor momento" class="world-image">
+                <div class="overlay">Mejor momento</div>
+            </a>
+        </div>
+
+        <!-- Botón para limpiar el localStorage -->
+        <button id="clear-storage" class="clear-storage-button">Limpiar Progreso</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Verificar si la historia de Cerdanyola está completada
+        if (localStorage.getItem('cerdayolaCompleted') === 'true') {
+            const cerdayolaItem = document.getElementById('primera-foto');
+            cerdayolaItem.style.filter = 'grayscale(100%)';
+            cerdayolaItem.style.pointerEvents = 'none';
+            cerdayolaItem.querySelector('img').style.filter = 'grayscale(100%)';
+            cerdayolaItem.querySelector('.overlay').style.color = 'rgba(255, 255, 255, 0.5)';
+        }
+        if (localStorage.getItem('primerRegaloCompleted') === 'true') {
+            const cerdayolaItem = document.getElementById('primer-regalo');
+            cerdayolaItem.style.filter = 'grayscale(100%)';
+            cerdayolaItem.style.pointerEvents = 'none';
+            cerdayolaItem.querySelector('img').style.filter = 'grayscale(100%)';
+            cerdayolaItem.querySelector('.overlay').style.color = 'rgba(255, 255, 255, 0.5)';
+        }
+        if (localStorage.getItem('veranoComplicadoCompleted') === 'true') {
+            const cerdayolaItem = document.getElementById('verano-complicado');
+            cerdayolaItem.style.filter = 'grayscale(100%)';
+            cerdayolaItem.style.pointerEvents = 'none';
+            cerdayolaItem.querySelector('img').style.filter = 'grayscale(100%)';
+            cerdayolaItem.querySelector('.overlay').style.color = 'rgba(255, 255, 255, 0.5)';
+        }
+        if (localStorage.getItem('segundoRegaloCompleted') === 'true') {
+            const cerdayolaItem = document.getElementById('segundo-regalo');
+            cerdayolaItem.style.filter = 'grayscale(100%)';
+            cerdayolaItem.style.pointerEvents = 'none';
+            cerdayolaItem.querySelector('img').style.filter = 'grayscale(100%)';
+            cerdayolaItem.querySelector('.overlay').style.color = 'rgba(255, 255, 255, 0.5)';
+        }
+        if (localStorage.getItem('juegoComplicadoComplete') === 'true') {
+            const cerdayolaItem = document.getElementById('juego-complicado');
+            cerdayolaItem.style.filter = 'grayscale(100%)';
+            cerdayolaItem.style.pointerEvents = 'none';
+            cerdayolaItem.querySelector('img').style.filter = 'grayscale(100%)';
+            cerdayolaItem.querySelector('.overlay').style.color = 'rgba(255, 255, 255, 0.5)';
+        }
+        if (localStorage.getItem('apegoDestructivoComplete') === 'true') {
+            const cerdayolaItem = document.getElementById('apego-destructivo');
+            cerdayolaItem.style.filter = 'grayscale(100%)';
+            cerdayolaItem.style.pointerEvents = 'none';
+            cerdayolaItem.querySelector('img').style.filter = 'grayscale(100%)';
+            cerdayolaItem.querySelector('.overlay').style.color = 'rgba(255, 255, 255, 0.5)';
+        }
+        if (localStorage.getItem('mejorMomentoCompleted') === 'true') {
+            const cerdayolaItem = document.getElementById('mejor-momento');
+            cerdayolaItem.style.filter = 'grayscale(100%)';
+            cerdayolaItem.style.pointerEvents = 'none';
+            cerdayolaItem.querySelector('img').style.filter = 'grayscale(100%)';
+            cerdayolaItem.querySelector('.overlay').style.color = 'rgba(255, 255, 255, 0.5)';
+        }
+    
+        // Verificar si todas las historias están completadas
+        function checkAllCompleted() {
+            const completed = [
+                localStorage.getItem('cerdayolaCompleted') === 'true',
+                localStorage.getItem('primerRegaloCompleted') === 'true',
+                localStorage.getItem('veranoComplicadoCompleted') === 'true',
+                localStorage.getItem('segundoRegaloCompleted') === 'true',
+                localStorage.getItem('juegoComplicadoComplete') === 'true',
+                localStorage.getItem('apegoDestructivoComplete') === 'true',
+                localStorage.getItem('mejorMomentoCompleted') === 'true'
+            ];
+    
+            // Si todos los valores son true, redirigir a la página final
+            if (completed.every(Boolean)) {
+                window.location.href = 'pagina_final.html';
+            }
+        }
+    
+        // Llamar a la función para verificar al cargar la página
+        checkAllCompleted();
+    
+        // Función para limpiar el localStorage
+        document.getElementById('clear-storage').addEventListener('click', function() {
+            localStorage.clear();
+            alert('Progreso eliminado.');
+            location.reload(); // Recarga la página para aplicar los cambios
+        });
+    </script>
+    
+</body>
+</html>

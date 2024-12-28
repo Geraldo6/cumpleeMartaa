@@ -1,0 +1,130 @@
+/* General Reset */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+/* Contador de puntos */
+#scoreDisplay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Centrado del contenedor del menú */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Estilo del texto de introducción */
+.intro-text {
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Botón del menú */
+.menu-button {
+    padding: 15px 30px;
+    font-size: 1em;
+    color: white;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo del contenedor del juego */
+.game-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #34495e;
+    position: relative;
+}
+
+#distance {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Pantalla de carga con imagen de fondo */
+.loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/C.png') no-repeat center center; /* Verifica esta ruta */
+    background-size: cover; /* Asegurarse de que la imagen cubra toda la pantalla */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    border: 5px solid red; /* Temporario: Para ver si el contenedor se está mostrando */
+}
+
+/* El resto del código sigue igual */
+
+
+
+/* Estilo del texto en la pantalla de carga */
+.loading-screen h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+}
+
+.loading-screen p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+}
+
+/* Spinner centrado */
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3); /* Bordes translúcidos */
+    border-top: 8px solid white; /* Borde superior blanco para el efecto */
+    border-radius: 50%; /* Para hacerlo circular */
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite; /* Animación de rotación */
+    margin-top: 20px;
+}
+
+/* Animación de rotación */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

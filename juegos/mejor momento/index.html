@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: yellow;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px;
+        }
+
+        button {
+            font-family: 'Papyrus', fantasy;
+            background-color: #4CAF50;
+            color: white;
+            margin: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 0 10px purple;
+        }
+
+        td {
+            height: 200px;
+            width: 200px;
+            border: 10px solid pink;
+            padding: 0px;
+            background-image: url("img/pizza.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 0 0 100px blue;
+        }
+
+        p {
+            font-family: 'Papyrus', fantasy;
+            color: yellow;
+            border: 10px solid pink;
+            box-shadow: 0 0 100px rgb(55, 0, 255);
+            background-color: blue;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 10px solid pink;
+            padding: 0px;
+            box-shadow: 0 0 100px blue;
+        }
+
+        .divs {
+            display: inline-block;
+            height: 75px;
+            width: 300px;
+            border: 10px solid pink;
+            border-radius: 20px;
+            box-shadow: 0 0 100px rgb(55, 0, 255);
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="divs">
+            <p id="monedasHtml">Monedas: 0</p>
+        </div>
+        <div class="divs">
+            <p id="zombis">Zombis: </p>
+        </div>
+        <div class="divs">
+            <p id="recompensas">Recompensas: </p>
+        </div>
+        <div class="divs">
+            <p id="energiaHtml">Energía: 3</p>
+        </div>
+        <br>
+        <div id="boton">
+            <button onclick="juego()" id="botonMover" name="mover">Mover</button>
+        </div>
+
+        <!-- Botones para poderes especiales -->
+        <div id="poderesEspeciales">
+            <button onclick="activarPoder('inmunidad')">Inmunidad Temporal</button>
+            <button onclick="activarPoder('radar')">Radar de Zombis</button>
+        </div>
+        <div id="info">
+            <p>Vale este juego va de moverte por las diferentes casillas, hay tanto zombis como recompensas, los zombis
+                te quitan puntos las recompensas te suman, i cada vez que te mueves sumas un punto.</p>
+            <p>Para ganar necesitas 10 puntos suerteee.</p>
+        </div>
+
+        <div id="tauler"></div>
+        <div id="boton">
+            <button onclick="recargar()" id="recargar">Reintentar</button>
+        </div>
+        <script src="mainGrafica.js"></script>
+    </center>
+</body>
+
+</html>
